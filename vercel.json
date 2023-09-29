@@ -7,9 +7,8 @@
     }
   ],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "index.js"
-    }
+      { "src": "/api/hello", "dest": "/backend/index.ts" },
+      { "src": "/api/predications", "dest": "/backend/index.ts" },
+      { "src": "/api/fixtures", "dest": "/backend/index.ts" }
   ]
 }
