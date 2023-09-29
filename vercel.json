@@ -2,12 +2,12 @@
   "version": 2,
   "builds": [
     {
-      "src": "index.js",
+      "src": "backend/index.ts",
       "use": "@now/node"
     }
   ],
   "routes": [
-      { "src": "/api/hello", "dest": "/backend/index.ts" },
+      { "src": "/hello", "dest": "/backend/index.ts" },
       { "src": "/api/predications", "dest": "/backend/index.ts" },
       { "src": "/api/fixtures", "dest": "/backend/index.ts" }
   ]
