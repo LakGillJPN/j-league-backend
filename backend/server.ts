@@ -4,6 +4,7 @@ import path from 'path';
 import {  Request, Response } from 'express';
 import { Points } from '../globals';
 import { homeCheck, awayCheck } from './predictCheck';
+import cors from 'cors'
 
 
 export function setupServer() {
@@ -12,6 +13,9 @@ export function setupServer() {
 
   app.use(express.static(path.resolve(__dirname, '../frontend/build')));
   app.use(express.json());
+  app.use(cors({
+    origin: 'https://j-league-backend.vercel.app',
+  }));
 
   app.get('/hello', (req : Request, res: Response) => {
     res.send('world');
