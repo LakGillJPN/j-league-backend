@@ -3,7 +3,7 @@ import db from './knex';
 import path from 'path';
 import {  Request, Response } from 'express';
 import { Points } from '../globals';
-import { homeCheck, awayCheck } from '../frontend/src/utils/predictCheck';
+import { homeCheck, awayCheck } from './predictCheck';
 
 export function setupServer() {
   const app = express();

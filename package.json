@@ -6,8 +6,7 @@
   "scripts": {
     "test": "cross-env NODE_ENV=development jest --coverage --detectOpenHandles  --verbose",
     "start": "ts-node ./backend/index.ts",
-    "build": "npm install && npm run migrate && npm run seed && cd frontend && npm install && npm run build",
-    "newbuild": "npm install && cd frontend && npm install && npm run build",
+    "build": "npm install && npm run migrate && npm run seed",
     "dev": "nodemon ./backend/index.ts",
     "lint": "eslint --fix --ext .js .",
     "make:migration": "knex migrate:make",
