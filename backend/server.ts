@@ -5,8 +5,10 @@ import {  Request, Response } from 'express';
 import { Points } from '../globals';
 import { homeCheck, awayCheck } from './predictCheck';
 
+
 export function setupServer() {
   const app = express();
+
 
   app.use(express.static(path.resolve(__dirname, '../frontend/build')));
   app.use(express.json());
