@@ -7,8 +7,13 @@
     }
   ],
   "routes": [
-    { "src": "/api/predications", "dest": "backend/index.ts" },
+    { "src": "/hello", "dest": "backend/index.ts" },
     { "src": "/api/fixtures", "dest": "backend/index.ts" },
-    { "src": "/hello", "dest": "backend/index.ts" }
+    { "src": "/api/users", "dest": "backend/index.ts" },
+    { "src": "/api/predications", "dest": "backend/index.ts" },
+    { "src": "/api/results", "dest": "backend/index.ts" },
+    { "src": "/api/points", "dest": "backend/index.ts" },
+    { "src": "/api/total", "dest": "backend/index.ts" },
+    { "src": "/api/overall", "dest": "backend/index.ts" }
   ]
 }
