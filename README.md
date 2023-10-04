@@ -1,12 +1,14 @@
 <img src="/images\header.jpg" alt="Header" title="Header">
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) ![GitHub last updated (branch)](https://img.shields.io/github/last-commit/LakGillJPN/j-league-predictor) ![GitHub issues](https://img.shields.io/github/issues/LakGillJPN/j-league-predictor) 
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) ![GitHub last updated (branch)](https://img.shields.io/github/last-commit/LakGillJPN/j-league-backend) ![GitHub issues](https://img.shields.io/github/issues/LakGillJPN/j-league-backend) 
 
+<h1 align=center> Backend </h1>
 
+For the Frontend Repository, [click here](https://github.com/LakGillJPN/j-league-predictor)
 
 The J-League Predictor is an application that allows soccer fans to predicate the outcome of J-League games and earn points for accuracy.
 
-Deployment: https://j-league-predictor.onrender.com/
+Deployment: https://j-league-predictor.vercel.app/
 
 ## Contents
 - [Tech-Stack](#tech-stack)
@@ -23,13 +25,11 @@ Deployment: https://j-league-predictor.onrender.com/
 | Task       | Tech        |
 | ---------- | ----------- |
 | Language  | ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)  |
-| Frontend Framework  | ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)  |
-|  Frontend Testing  | ![cypress](https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e)  |
-| Backend Framework  | ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)   |
-|  Backend Testing  | ![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)  |
-|  User Auth | ![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase) |
+|  Framework  | ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)   |
+|  Testing  | ![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)  |
 |  Database | ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white) |
 
+Click [here](https://github.com/LakGillJPN/j-league-predictor#tech-stack) for the Frontend Tech Stack 
 
 
 
