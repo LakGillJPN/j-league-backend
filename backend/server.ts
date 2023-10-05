@@ -121,6 +121,8 @@ export function setupServer() {
   
 
   // Insert the user's points into the database
+
+  
   app.post('/api/points', async (req: Request, res: Response) => {
     const { uid, points } = req.body;
     if (!points || points.length === 0) {

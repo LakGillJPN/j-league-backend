@@ -1,4 +1,4 @@
-import { homeCheck, awayCheck } from "../../frontend/src/utils/predictCheck";
+import { homeCheck, awayCheck } from "../predictCheck";
 
 describe('homeCheck should come up with the correct amount', () => {
   it('should respond with true if the home team wins ', async () => {

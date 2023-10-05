@@ -98,3 +98,40 @@ describe('GET /api/predications', () => {
   })
 });
 
+describe('GET /api/results', () => {
+  it('should retrieve results data when GET /api/results', async () => {
+    const response = await request(app).get('/api/results');
+    expect(response.status).toBe(200);
+    expect(response.body).toBeDefined(); // Check that the response contains data
+  })
+});
+
+const realPoints = {
+  uid: "A1B2C3",
+  game_id: 100,
+  gameweek: "Test Week",
+  game_points: 50
+}
+
+const fakePoints = {
+  uid: "A1B2C3",
+  game_id: "300001",
+  gameweek: "Test Week",
+  game_points: '50'
+}
+
+describe('POST /api/points', () => {
+  it('should return a message if nothing is entered ', async () => {
+    const response = await request(app).post('/api/points')
+    .send();
+    expect(response.text).toBe('Points array is empty')
+  })
+
+  it('should enter the data into the table', async () => {
+    const response = await request(app).post('/api/points')
+    .send(realPoints);
+    expect(response.status).toBe(200);
+    expect(response.text).toBe('Points inserted')
+    expect(response.body).toBeDefined();
+  })
+})
