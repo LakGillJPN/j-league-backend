@@ -73,8 +73,6 @@ describe('POST /api/predications', () => {
     expect(response.body).toBeDefined(); // Check that the response contains data
   })
 
-  
-
   it('should not enter the data into the table when the uid is not a string ', async () => {
     const response = await request(app).post('/api/predications')
     .send(fakeload);
@@ -107,18 +105,15 @@ describe('GET /api/results', () => {
 });
 
 const realPoints = {
-  uid: "A1B2C3",
-  game_id: 100,
-  gameweek: "Test Week",
-  game_points: 50
+  uid: '123456',
+  points: [[100, 20000, "Test Week"]]
 }
 
 const fakePoints = {
-  uid: "A1B2C3",
-  game_id: "300001",
-  gameweek: "Test Week",
-  game_points: '50'
+  uid: '123456,',
+  points: [[100, "Test Week", 20000]]
 }
+
 
 describe('POST /api/points', () => {
   it('should return a message if nothing is entered ', async () => {
@@ -133,5 +128,12 @@ describe('POST /api/points', () => {
     expect(response.status).toBe(200);
     expect(response.text).toBe('Points inserted')
     expect(response.body).toBeDefined();
+  })
+
+  it('should not enter data when the the points array contains incorrect data', async () => {
+    const response = await request(app).post('/api/points')
+    .send(fakePoints);
+    expect(response.status).toBe(500);
+    expect(response.text).toBe('Internal server error')
   })
 })
