@@ -2,8 +2,6 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) ![GitHub last updated (branch)](https://img.shields.io/github/last-commit/LakGillJPN/j-league-backend) ![GitHub issues](https://img.shields.io/github/issues/LakGillJPN/j-league-backend) 
 
-<h1 align=center> Backend </h1>
-
 For the Frontend Repository, [click here](https://github.com/LakGillJPN/j-league-predictor)
 
 The J-League Predictor is an application that allows soccer fans to predicate the outcome of J-League games and earn points for accuracy.
