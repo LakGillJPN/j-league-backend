@@ -4,7 +4,7 @@
 
 For the Frontend Repository, [click here](https://github.com/LakGillJPN/j-league-predictor)
 
-The J-League Predictor is an application that allows soccer fans to predicate the outcome of J-League games and earn points for accuracy.
+The J-League Predictor is an application that allows soccer fans to predict the outcome of J-League games and earn points for accuracy.
 
 Deployment: https://j-league-predictor.vercel.app/
 
@@ -49,70 +49,18 @@ Click [here](https://github.com/LakGillJPN/j-league-predictor#tech-stack) for th
     
     ```
 
-3. This application uses Firebase for authentication. Please create a `.env` file and use the `.env.example` file to see what variables are required.
-
 # Usage
 
-The J-League Predictor app utilizes Express for its backend and React for its frontend. To run the app, it is necessary to start the backend server before launching the frontend:
+The J-League Predictor app utilizes Express for its backend and React for its frontend. For the Frontend instructions, click [here](https://github.com/LakGillJPN/j-league-predictor#usage).
 
-1. Start the Express server:
+Start the Express server:
 
-    ```bash
+  ```bash  
+ npm run start  
+ ```
     
-    npm run start
-    
-    ```
-    
-2. The Express server will run on  **`http://localhost:4000/`**
+The Express server will run on  **`http://localhost:4000/`**
 
-3. Move to the Frontend folder:
-
-    ```bash
-    
-    cd frontend/
-    
-    ```
-4. Start the Frontend server:
-
-    ```bash
-    
-    npm run start
-    
-    ```
-    
-5. The Frontend server will run on  **`http://localhost:3000/`**
-
-
-
-# Home
-<img src="/images\homepage.jpg" alt="Homepage" title="Homepage">
-
-On the home page we have a carousel wheel displaying all the of the games upcoming in this gameweek.
-
-# Play
-<img src="/images\play_page.jpg" alt="Play" title="Play">
-
-In this page, users can make their predication of what they think the score of this week's games will be. After making their predication, a user can alter their predication right up to the deadline.
-
-# Results
-<img src="/images\results.jpg" alt="Results" title="Results">
-
-The results of the previous gameweek are compared to the user's predication and awarded points. 
-
-- [ ] Correct Home or Away Score - 30pts
-- [ ] Correct Outcome - 50pts
-- [ ] Correct Home or Away Score + Correct Outcome - 70pts
-- [ ] Correct Home and Away Score + Correct Outcome - 100pts
-
-# Future Features
-- [ ] Leaderboard
-- [ ] Mobile View
-- [ ] Display Names
-- [ ] Results of Previous Gameweeks
-
-# Goals
-- To have the application fully functional for the start of the next J-League season
-- To have the app deployed on either AWS or Heroku
 
 
 <!---
