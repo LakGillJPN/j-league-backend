@@ -12,11 +12,7 @@ Deployment: https://j-league-predictor.vercel.app/
 - [Tech-Stack](#tech-stack)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Home](#home)
-- [Play](#play)
-- [Results](#results)
-- [Future Features](#future-features)
-- [Goals](#goals)
+
 
 ## Tech Stack 
 
