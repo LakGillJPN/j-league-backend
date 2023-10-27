@@ -34,6 +34,43 @@ export function setupServer() {
     res.send(users);
   });
 
+  /*
+  Payload {
+        uid,
+        username,
+        birthday,
+        location,
+        favTeam
+  }
+  */
+
+  app.post('/api/users', async (req, res) => {
+    try {
+        let users = req.body;
+
+        if (!Array.isArray(users)) {
+          users = [users];
+      }
+
+        await Promise.all(users.map(async (data: any) => {
+            await db('users').insert({
+                uid: data.uid,
+                username: data.username,
+                date_of_birth: data.birthday,
+                location: data.location,
+                favourite_team: data.favTeam
+            });
+        }));
+        res.status(200).send('Data entered into the user table');
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Error occurred while entering data!');
+    }
+});
+
+
+ 
+
   // Retrieve all the of the fixtures that have not started ("NS") yet
   app.get('/api/gameweek', async (req: Request , res: Response) => {
     const gameweek = await db('fixtures')
