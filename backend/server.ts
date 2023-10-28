@@ -52,7 +52,11 @@ export function setupServer() {
           users = [users];
       }
 
+
         await Promise.all(users.map(async (data: any) => {
+            await db('users')
+            .where('uid', data.uid)
+            .delete();
             await db('users').insert({
                 uid: data.uid,
                 username: data.username,
