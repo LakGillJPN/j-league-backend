@@ -34,7 +34,9 @@ async function getFixturesData() {
       game.score.fulltime.home,
       game.score.fulltime.away,
       game.fixture.venue.name,
-      game.fixture.venue.city,
+      //game.fixture.venue.city,
+      game.league.name, 
+      game.league.logo
     ]))
   } catch (error) {
     console.error(error);

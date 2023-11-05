@@ -51,6 +51,8 @@ export interface API_Data {
   }
   league: {
     round: number;
+    name: string;
+    logo: string;
   };
   teams: {
     home: Team;

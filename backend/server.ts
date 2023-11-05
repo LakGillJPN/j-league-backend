@@ -151,6 +151,8 @@ export function setupServer() {
         'fixtures.did_away_team_win',
         'fixtures.home_team_score',
         'fixtures.away_team_score',
+        'fixtures.home_team_logo_url',
+        'fixtures.away_team_logo_url',
         'predications.home_predication',
         'predications.away_predication',
         'predications.home_win',
