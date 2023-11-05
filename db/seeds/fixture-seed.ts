@@ -30,7 +30,9 @@ exports.seed = async function(knex: Knex) {
       home_team_score: data[10],
       away_team_score: data[11],
       venue_name: data[12],
-      //venue_city: data[13]
+      venue_city: '',
+      league_name: data[13],
+      league_logo_url: data[14]
     });
   }
 };
