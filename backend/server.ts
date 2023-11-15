@@ -10,7 +10,6 @@ import cors from 'cors'
 export function setupServer() {
   const app = express();
 
-
   app.use(express.static(path.resolve(__dirname, '../frontend/build')));
   app.use(express.json());
   app.use(cors())
