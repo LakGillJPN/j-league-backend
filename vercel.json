@@ -15,5 +15,9 @@
     { "src": "/api/points", "dest": "backend/index.ts" },
     { "src": "/api/total", "dest": "backend/index.ts" },
     { "src": "/api/overall", "dest": "backend/index.ts" }
-  ]
+  ],
+  "crons": [{
+    "path": "/api/cron",
+    "schedule": "0 10 * * *"
+  }]
 }
