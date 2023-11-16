@@ -5,6 +5,7 @@ import {  Request, Response } from 'express';
 import { Points } from '../globals';
 import { homeCheck, awayCheck } from './predictCheck';
 import cors from 'cors'
+import axios from 'axios';
 
 
 export function setupServer() {
@@ -243,7 +244,18 @@ export function setupServer() {
       res.status(500).send('Internal server error');
     }
   });
-  
+
+  app.post('/api/cron', async (req, res) => { 
+    try {
+      const response = await axios.post('https://api.vercel.com/v1/integrations/deploy/prj_GvemCOI3NVS7D5A2VuG0CGgXN1Vz/mMICaEBVUM');
+      console.log('Vercel deployment triggered:', response.data);
+      res.status(200).json({ success: true });
+    } catch (error) {
+      console.error('Error triggering Vercel deployment');
+      res.status(500).json({ success: false});
+    }
+  })
+
   return app;
 };
 
