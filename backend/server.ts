@@ -52,7 +52,6 @@ export function setupServer() {
           users = [users];
       }
 
-
         await Promise.all(users.map(async (data: any) => {
             await db('users')
             .where('uid', data.uid)
