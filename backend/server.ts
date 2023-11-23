@@ -6,6 +6,7 @@ import { Points } from '../globals';
 import { homeCheck, awayCheck } from './predictCheck';
 import cors from 'cors'
 import axios from 'axios';
+import getAge from './get-age';
 
 
 export function setupServer() {
@@ -52,18 +53,21 @@ export function setupServer() {
           users = [users];
       }
 
-
         await Promise.all(users.map(async (data: any) => {
             await db('users')
             .where('uid', data.uid)
             .delete();
-            await db('users').insert({
-                uid: data.uid,
-                username: data.username,
-                date_of_birth: data.birthday,
-                location: data.location,
-                favourite_team: data.favTeam
-            });
+            if (getAge(data.birthday) >= 18) {
+              await db('users').insert({
+                  uid: data.uid,
+                  username: data.username,
+                  date_of_birth: data.birthday,
+                  location: data.location,
+                  favourite_team: data.favTeam
+              });    
+            } else {
+              res.status(500).send('User is too young to register')
+            }
         }));
         res.status(200).send('Data entered into the user table');
     } catch (error) {
@@ -73,7 +77,6 @@ export function setupServer() {
 });
 
 
- 
 
   // Retrieve all the of the fixtures that have not started ("NS") yet
   app.get('/api/gameweek', async (req: Request , res: Response) => {
